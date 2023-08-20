@@ -1,0 +1,20 @@
+0818메모장
+
+업로드 라이브러리
+1) cos.jar : oreilly
+2)
+
+sql문
+create table gallery(
+	gallery_idx number primary key
+	, title varchar2(100)
+	, writer varchar2(20)
+	, content clob --blob 자료형은 파일 자체를 올릴 수 있음
+	, filename varchar2(20) --이름만 저장할 예정임
+	, regdate date default sysdate
+	, hit number default 0
+);
+
+create sequence seq_gallery
+increment by 1
+start with 1;

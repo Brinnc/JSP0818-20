@@ -1,0 +1,30 @@
+0817메모장
+
+<!--JNDI세팅-->
+--<GlobalNamingResources>
+--<Resource auth=
+<!--server.xml-->
+<Resource name="jdbc/oracle"
+          type="javax.sql.DataSource"
+          driverClassName="oracle.jdbc.driver.OracleDriver"
+          url="jdbc:oracle:thin:@localhost:1521:XE"
+          username="jsp"
+          password="1234"
+          maxActive="10"
+          maxIdle="5"
+          maxWait="10000" />
+
+<!--context.xml-->
+--<WatchedResource>${catalina.base}/conf/web.xml</WatchedResource>
+<ResourceLink
+		name="jdbc/oracle"
+		global="jdbc/oracle"
+		type="javax.sql.DataSource"/>
+
+--</Context>
+
+
+
+
+
+enctype="multipart/form-data"
